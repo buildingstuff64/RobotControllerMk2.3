@@ -251,6 +251,11 @@ public class RobotController : MonoBehaviour
         }
     }
 
+    public void quitApp()
+    {
+        Application.Quit();
+    }
+
 }
 public class PathInstruction
 {

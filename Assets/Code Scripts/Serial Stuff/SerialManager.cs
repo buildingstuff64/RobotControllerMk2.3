@@ -79,7 +79,7 @@ public class SerialManager : MonoBehaviour
             thread = new Thread(new ThreadStart(serialThread.RunForever));
             thread.Start();
         }
-        catch (Exception e) { h = false; Debug.LogError(e); throw; }
+        catch (Exception e) { Debug.LogError(e); throw; }
         StartCoroutine(Iconnect());
     }
 

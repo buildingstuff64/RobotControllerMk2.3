@@ -15,7 +15,7 @@ public class CameraManager : MonoBehaviour
         cam.GetComponent<Camera>();
         ypos = ((gm.grid_spacing_y * gm.grid_size[1] + 2) / 2) - gm.grid_spacing_y / 2;
         xposcenter = ((gm.grid_spacing_x * gm.grid_size[1] + 2) / 2) - gm.grid_spacing_x / 2;
-        xposleft = xposcenter + (1920 / 1080 * 1920 / 670);
+        xposleft = xposcenter + (Screen.width / Screen.height * Screen.width / 660);
     }
 
     // Update is called once per frame

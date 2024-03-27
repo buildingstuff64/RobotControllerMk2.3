@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class PackageManager : MonoBehaviour
 {
@@ -173,11 +172,13 @@ public class PackageManager : MonoBehaviour
 
     public void togglePlacePackage()
     {
+        isPlaceObs = false;
         isPlacePackage = isPlacePackage ? false : true;
     }
 
     public void tooglePlaceObs()
     {
+        isPlacePackage = false;
         isPlaceObs = isPlaceObs ? false : true;
     }
     void placeObs(GridNode gn)
