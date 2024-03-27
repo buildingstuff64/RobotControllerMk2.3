@@ -70,7 +70,6 @@ public class SerialManager : MonoBehaviour
     {
         lastCom = com;
         DisconnectSerial();
-        bool h = true;
         try
         {
             serialThread = new SerialThreadLines(com,

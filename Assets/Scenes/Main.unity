@@ -2988,6 +2988,7 @@ MonoBehaviour:
   packagePrefab: {fileID: 3655594133561250442, guid: bf23c889402530f4d9803f87c84d72bf, type: 3}
   obsPrefab: {fileID: 4786431785732714146, guid: 465a326a44c8e32438c297f073763760, type: 3}
   packages: []
+  donePackages: []
 --- !u!4 &547615372
 Transform:
   m_ObjectHideFlags: 0
