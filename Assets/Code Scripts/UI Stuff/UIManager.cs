@@ -7,12 +7,21 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private SerialManager serialManager;
+    [SerializeField] private GridManager gridManager;
     [SerializeField] private ScrollList packagelist;
     [SerializeField] private SerialList seriallist;
     [SerializeField] private TMP_Text CommPortText;
     [SerializeField] private TMP_Dropdown CommPortDropdown;
     [SerializeField] private GameObject SerialConnect;
+    [SerializeField] private GameObject Settings;
 
+    public TMP_InputField xsize;
+    public TMP_InputField ysize;
+
+    private void Start()
+    {
+        Settings.SetActive(false);
+    }
 
     public void serialIn(string txt)
     {
@@ -65,6 +74,29 @@ public class UIManager : MonoBehaviour
     public void hideConnect(bool s)
     {
         SerialConnect.SetActive(s);
+    }
+
+    public void OpenSettings()
+    {
+        Settings.SetActive(true);
+    }
+
+    public void CloseSettings()
+    {
+        Settings.SetActive(false);
+    }
+
+    public void updateSize()
+    {
+        int x = int.Parse(xsize.text);
+        int y = int.Parse(ysize.text);
+        gridManager.updateSize(x, y);
+    }
+
+    public void openBaseLocations()
+    {
+        string path = Application.persistentDataPath + "/BaseLocations.json";
+        Application.OpenURL(path);
     }
 
 }

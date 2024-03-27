@@ -26,6 +26,14 @@ public class GridManager : MonoBehaviour
         
     }
 
+    public void updateSize(int X, int Y)
+    {
+        Array.Clear(grid, 0, grid.Length);
+        grid_size = new int[] { X, Y };
+        CreateGrid();
+        cameraManager.MoveCamera(true);
+    }
+
     void CreateGrid()
     {
         grid = new GameObject[grid_size[0], grid_size[1] + 1];
