@@ -33,6 +33,15 @@ public class BaseLocations : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        savepath = Application.persistentDataPath + "/BaseLocations.json";
+        if (!File.Exists(savepath))
+        {
+            saveBaseLocations();
+        }
+    }
+
     public void saveBaseLocations()
     {
         savepath = Application.persistentDataPath + "/BaseLocations.json";

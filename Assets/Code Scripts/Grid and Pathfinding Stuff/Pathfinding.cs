@@ -19,12 +19,6 @@ public class Pathfinding : MonoBehaviour
     private Package ignorePackage;
     public List<Vector2Int> obsticals = new List<Vector2Int>();
 
-    public void TestFunction()
-    {
-        StartCoroutine(rc.startControl());
-
-    }
-
     public void toPackage(Package package)
     {
         Package p = pm.getPackage(package);

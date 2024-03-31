@@ -22,7 +22,6 @@ public class RobotController : MonoBehaviour
     public void StartRobotControl()
     {
         StartCoroutine(startControl());
-        
     }
     public IEnumerator startControl()
     {
